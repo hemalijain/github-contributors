@@ -3,10 +3,9 @@ require 'github_api'
 module Github
   module Contributors   
     class Github::Contributors::List
-      attr_reader :connection,:path,:current_user
-      def initialize connection,path,current_user, options = {}
+      attr_reader :connection,:current_user
+      def initialize connection,current_user, options = {}
         @current_user=current_user
-        @path = path
         @connection = connection
         find_list_of_orgs
       end
